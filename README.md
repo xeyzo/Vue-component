@@ -22,3 +22,17 @@ npm run lint
 
 ### Customize configuration
 See [Configuration Reference](https://cli.vuejs.org/config/).
+
+
+### Deskripsi tugas
+```
+Vue Component
+membuat searching apps (apps), menggunakan vue yang di generate dengan vue cli.
+dan dipecah2 ke compoenent berdasarkan fungsinya masing. yang di tambahkan select item, yang nanti akan di tampilkan di atas daftar list.
+jadi kurang lebih ada 3 component:
+
+search box
+daftar selected item
+daftar item - yang belum terpilih
+
+```
