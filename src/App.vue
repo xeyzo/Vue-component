@@ -1,18 +1,29 @@
 <template>
   <div id="app">
-    <img alt="Vue logo" src="./assets/logo.png">
-    <HelloWorld msg="Welcome to Your Vue.js App"/>
+    <div class="container mx-auto">
+        <PhotoCard/>
+    </div>
   </div>
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue'
+import PhotoData from './dummy/data.json'
+
+import PhotoCard from './components/PhotoCard'
 
 export default {
   name: 'App',
   components: {
-    HelloWorld
-  }
+    PhotoCard
+  },
+  data(){
+    return{
+      booklist: PhotoData,
+    };
+  },
+  created(){
+    console.log("list", this.booklist)
+  },
 }
 </script>
 
