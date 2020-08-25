@@ -1,5 +1,5 @@
 <template>
-<input class="placeholder-gray-500 md:placeholder-blue-400">
+      <input class="placeholder-gray-500 md:placeholder-black-1000" placeholder="search...">
 </template>
 
 <script>

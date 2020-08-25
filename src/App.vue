@@ -1,5 +1,6 @@
 <template>
 <div id="app">
+    <Search />
     <div class="container mx-auto">
       <div class='flex flex-wrap'>
           <PhotoCard v-for='book in booklist' :key='book.id' v-bind:title="book.title" v-bind:url="book.thumbnailUrl" />
@@ -10,13 +11,14 @@
 
 <script>
 import PhotoData from './dummy/data.json'
-
+import Search from './components/Search'
 import PhotoCard from './components/PhotoCard'
 
 export default {
   name: 'App',
   components: {
-    PhotoCard
+    PhotoCard,
+    Search
   },
   data(){
     return{
@@ -26,6 +28,13 @@ export default {
   created(){
     console.log("list", this.booklist)
   },
+  computed: {
+    filteredList() {
+      return this.booklist.filter(book => {
+        return book.title.toLowerCase().includes(this.search.toLowerCase())
+      })
+    }
+  }
 }
 </script>
 
