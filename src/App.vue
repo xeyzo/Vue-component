@@ -1,7 +1,9 @@
 <template>
-  <div id="app">
+<div id="app">
     <div class="container mx-auto">
-        <PhotoCard/>
+      <div class='flex flex-wrap'>
+          <PhotoCard v-for='book in booklist' :key='book.id' v-bind:title="book.title" v-bind:url="book.thumbnailUrl" />
+      </div>
     </div>
   </div>
 </template>
